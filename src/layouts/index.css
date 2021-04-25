@@ -1,0 +1,320 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Reem+Kufi&display=swap');
+
+body{
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  /* font-family: 'Cairo', sans-serif; */
+  font-family: 'Cairo', sans-serif;
+font-family: 'Reem Kufi', sans-serif;
+  line-height: 1.3;
+  font-size: 20px;
+  -webkit-font-smoothing:antialiased;
+   /* background: linear-gradient(294.13deg, #E0695B 10.62%, #3913B8 88.43%) ;  */
+   background: rgb(242, 246, 255);
+   height: 100%;
+  
+
+}
+
+::-webkit-scrollbar{
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:  linear-gradient(
+    209.21deg
+    , rgb(46, 20, 103) 13.57%, rgb(60, 161, 254) 98.38%);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:  linear-gradient(294.13deg, #E0695B 10.62%, #3913B8 88.43%);
+   
+}
+
+
+a{
+  text-decoration: none;
+  color: #5334F5;
+  font-weight: 600;
+}
+.Hero{
+  /* background: url("../images/Planes2.png"); */
+  background: linear-gradient(
+    189.16deg
+    , rgb(57, 15, 199) 13.57%, rgb(40, 35, 77) 98.38%);
+  height: 900px;
+  background-size: cover;
+  background-position:center ;
+  position: relative;
+  @media(max-width: 640px)
+  {
+
+    height: 990px;
+  }
+  
+  
+}
+.HeroGroup{
+  margin: 0 auto;
+  padding: 150px 50px;
+  text-align: center;
+  max-width: 500px;
+
+}
+
+.HeroGroup h1{
+  color: white;
+  font-size: 60px;
+  line-height: 1.2;
+  margin: 0;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  
+}
+.HeroGroup p {
+  font-size: 27px;
+  line-height: 1.5;
+  opacity: 0;
+  color: rgba(255, 255, 255, 0.8);
+  animation: HeroAnimation 5s cubic-bezier(0.2, 0.82, 0.2, 1) forwards ;
+  animation-delay: 1.5s;
+}
+
+.HeroGroup a{
+  font-size: 17px;
+  font-weight: 600;
+  text-transform:uppercase ;
+  padding: 9px 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  
+  border: 1px solid rgba(255, 255, 255, 0.25) ;
+  transition: 1s cubic-bezier(0.2, 0.82, 0.2, 1);
+}
+.HeroGroup a:hover{
+background: white;
+color: black;
+
+
+
+}
+
+@media(max-width:640){
+  
+
+  .HeroGroup{
+    padding: 100px 20px;
+  }
+  .Hero h1{
+    font-size: 40px;
+  }
+  .Hero p{
+    font-size: 24px;
+  }
+}
+
+
+@keyframes HeroAnimation{
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.Hero svg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.HeroGroup .Logo{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-gap: 40px;
+  margin: 90px 0;
+  justify-content: center;
+  align-items: center;
+ 
+}
+@media (max-width:640px) {
+  .Hero .Logo{
+    grid-template-columns: repeat(3,1fr);
+  }
+  
+}
+
+.Bubbles img{
+  width: 50px;
+  animation: bubble 7s linear infinite;
+}
+
+
+
+
+
+
+.Hero .Bubbles{
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-around;
+  left: 0;
+
+}
+
+@keyframes bubble{
+  0%{
+    transform: translateY(10px);
+    opacity: 0;
+    
+  }
+  50%{
+    
+    opacity: 0.5;
+    
+  }
+  70%{
+    opacity: 0.5;
+    
+  }
+  100%{
+    transform: translateY(-90vh);
+    opacity: 0;
+   
+  }
+}
+
+
+.Bubbles img:nth-child(1){
+  animation-delay: 2s;
+  width: 25px;
+  
+}
+.Bubbles img:nth-child(2){
+  animation-delay: 1s;
+}
+.Bubbles img:nth-child(3){
+  animation-delay: 3s;
+  width: 25px;
+}
+.Bubbles img:nth-child(4){
+  animation-delay: 4.5s;
+}
+.Bubbles img:nth-child(5){
+  animation-delay: 3s;
+}
+.Bubbles img:nth-child(6){
+  animation-delay: 6s;
+  width: 20px;
+}
+.Bubbles img:nth-child(7){
+  animation-delay: 7s;
+  width: 35px;
+}
+
+
+.Hero .Cards{
+  padding: 50px;
+}
+
+.Cards h2{
+  margin: 50px 20px;
+  font-size: 50px;
+  font-weight: 700;
+  background: linear-gradient(104deg,#050A27 0% , #4A548C 100%);
+  -webkit-background-clip: text;
+ 
+  color: transparent;
+  text-align: center;
+ 
+
+}
+
+
+.Cards h3{
+  margin: 50px 20px;
+  font-size: 50px;
+  font-weight: 700;
+  background: linear-gradient(
+    209.21deg
+    , rgb(46, 20, 103) 13.57%, rgb(60, 161, 254) 98.38%);
+  -webkit-background-clip: text;
+ 
+  color: transparent;
+  text-align: center;
+ 
+
+}
+
+.CardGroup{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 30px;
+  margin: 50px 60px 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width:1060px)
+{
+  .CardGroup{
+    grid-template-columns: repeat(2,1fr);
+  }
+  
+}
+
+
+@media (max-width:720px)
+{
+  .CardGroup{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+.CardGroup2{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 190px;
+  padding-left: 40px;
+  margin: 50px 60px 100px  140px;
+  justify-content: center;
+  align-items: center;
+ 
+  
+}
+
+
+@media (max-width:1060px)
+{
+  .CardGroup2{
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 10px;
+    
+  }
+  
+}
+
+
+@media (max-width:720px)
+{
+  .CardGroup2{
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 20px;
+  }
+}

@@ -1,0 +1,203 @@
+.Card1{
+    position: relative;
+    width: 320px;
+    height: 420px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    background: white;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    justify-content: center;
+    align-items: center; 
+    top: 40px;
+    transition: 0.5s;
+    perspective: 1000px;
+    
+  
+}
+
+
+/* 
+.Card1::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: -50%;
+    position: absolute;
+    background: white;
+    transform: skewY(345deg);
+    transition: 1s  ;
+
+
+}
+.Card1:hover{
+    transform: translateY(-30px) ;
+    
+}
+
+.Card1:hover::before{
+
+    transform: skewY(390deg);
+    top: -70%;
+
+}
+.Card1::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    font-weight: 600;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.2);
+
+
+} */
+
+
+.Card1 .cover{
+
+    width:280px ;
+    height: 100%;
+    position: absolute;
+    left: 40px;
+    background:linear-gradient(
+        209.21deg
+        , rgb(46, 20, 103) 13.57%, rgb(60, 161, 254) 98.38%); 
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    border-radius: 20px;
+    transition: all .5s ease-in;
+    z-index: 1;
+}
+
+
+.Card1:hover .cover{
+    transform: rotateY(-180deg);
+    width: 260px;
+    
+}
+
+figure{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    display: block;
+    backface-visibility: hidden;
+    
+
+}
+
+
+
+figure .back{
+    transform: rotateY(180deg);
+    background: url('../images/Design_and_Code_in_Framer_X_200x150_cover_new.svg');
+}
+
+
+ /* .cont{
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 60px;
+    z-index: -1;
+}
+ .cont img{
+    width: 90%;
+    transition: 0.5s;
+}
+
+ */
+
+@media (max-width:720px)
+{
+    .Card1{
+        width: 240px;
+        height: 340;
+    }
+    .Card1 .cover{
+        width: 200px;
+
+    }
+  .Card1:hover .cover{
+
+    width: 200px;
+}
+}
+
+@media (max-width:1010px)
+{
+    .Card1{
+        width: 240px;
+        height: 340;
+    }
+    .Card1 .cover{
+        width: 200px;
+
+    }
+  .Card1:hover .cover{
+
+    width: 200px;
+}
+}
+
+.Card1 .img{
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 20px;
+    z-index: -1;
+}
+.Card1 .img img{
+    width: 90%;
+    transition: 0.5s;
+}
+.Card1 .img img:hover{
+   width: 70%;
+}
+
+.Card1 .content{
+    
+    
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    padding-top: 200px;
+    padding-left: 20px;
+}
+
+.Card1 .content h3{
+    font-weight: 600;
+    font-size: 30px;
+    
+}
+
+.front h3{
+    color: white !important;
+    text-align: center;
+}
+
+.Card1 .content p{
+    font-size: 18px;
+    position: absolute;
+    padding-top: 100px;
+    color: rgba(0, 0, 0, 0.5) !important
+}
+
+
+.like{
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px;
+    border-radius: 20px;
+}
+.like img{
+    z-index: -1;
+}
